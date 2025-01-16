@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نمایش متن بیشتر</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.text {
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.hidden-text {
+  display: none;
+  color: #555;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.hidden {
+  display: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p class="text">
+      فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین
+      <span class="hidden-text">. دیجی‌کالا یکی از بزرگ‌ترین فروشگاه‌های اینترنتی در ایران است و با ارائه طیف گسترده‌ای از محصولات برای کاربران، تجربه‌ای رضایت‌بخش را فراهم می‌آورد.</span>
+    </p>
+    <button id="more-btn">مشاهده بیشتر</button>
+    <button id="less-btn" class="hidden">بستن</button>
+  </div>
+  
+  <script>
+const moreBtn = document.getElementById('more-btn');
+const lessBtn = document.getElementById('less-btn');
+const hiddenText = document.querySelector('.hidden-text');
+
+moreBtn.addEventListener('click', () => {
+  hiddenText.style.display = 'inline';
+  moreBtn.classList.add('hidden');
+  lessBtn.classList.remove('hidden');
+});
+
+lessBtn.addEventListener('click', () => {
+  hiddenText.style.display = 'none';
+  moreBtn.classList.remove('hidden');
+  lessBtn.classList.add('hidden');
+});
+
+  </script>
+</body>
+</html>
