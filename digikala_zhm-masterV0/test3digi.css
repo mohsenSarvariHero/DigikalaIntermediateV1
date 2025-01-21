@@ -796,6 +796,30 @@ body{
     color: #000;
 }
 
+@media (max-width: 1200px) {
+    .cate_item {
+        text-align: center;
+    }
+}
+
+/* Amir Item Category Responsive */
+.center-content {
+    display: flex;
+    flex-direction: column; /* Ensures rows stack vertically */
+    align-items: center; /* Centers items horizontally */
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Centers items inside each row */
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+}
+
+.cate_item img {
+    max-width: 100%; /* Makes images responsive */
+}
+
 
 
 
