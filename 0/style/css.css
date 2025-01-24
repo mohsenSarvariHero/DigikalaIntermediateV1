@@ -723,7 +723,7 @@ main .section-offer .container .items .price-orginal {
 
 
 
-main .section-popular article .num {
+main .section-popular article .a-a {
     padding: 15px;
     color: deepskyblue;
     font-size: 1.3em;
@@ -2331,7 +2331,10 @@ nav{
 }
 /* FARHAN END */
 
-
+.picture {
+    border-radius: 15px 15px 15px 15px; 
+    overflow: hidden; /* Ensures the image stays inside the border */
+}
 
 
 
